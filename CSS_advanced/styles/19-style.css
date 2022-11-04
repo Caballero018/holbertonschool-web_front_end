@@ -186,9 +186,3 @@ ul.row{
 .footer ul{
     text-align: right;
 }
-
-.row::after{
-    contain: none;
-    display: table;
-    clear: both;
-}
