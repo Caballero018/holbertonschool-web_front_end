@@ -294,7 +294,7 @@ ul.row{
     position: var(--header-logo-position);
 }
 
-.header-logo:link{
+link.header-logo{
     display: var(--header-logo-link-display);
     position: var(--header-logo-link-position);
     top: var(--header-logo-link-top);
