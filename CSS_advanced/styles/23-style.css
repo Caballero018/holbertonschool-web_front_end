@@ -205,6 +205,10 @@ ul.row{
     color: var(--text-color);
 }
 
-div,p.social-link{
-    color: var(--text-color);
+.social-link{
+    display: block;
+}
+
+.social-link > svg{
+
 }
