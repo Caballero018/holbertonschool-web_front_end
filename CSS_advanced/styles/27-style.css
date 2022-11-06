@@ -270,7 +270,7 @@ ul.row{
 }
 
 .section-hero{
-    background-size: 2rem;
+    background-size: flex;
     width: 90rem;
     height: auto;
 }
