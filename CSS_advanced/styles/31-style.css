@@ -373,7 +373,7 @@ ul.row{
     position: relative;
 }
 
-.card-testimonial .card-quote{
+.card-testimonial .card-quote::before{
     content: \201C;
     position: absolute;
     bottom: -4.5rem;
