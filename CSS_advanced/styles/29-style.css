@@ -184,15 +184,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav .nav-link::after{
-    content: none;
-    position: 0 0;
+    content: "";
+    position: absolute;
     color: var(--color-white);
     width: 0;
     height: 20%;
 }
 
 .nav .nav-item:hover{
-
+    color: var(--color-primary);
+    width: 100%;
 }
 
 .nav .nav-link:hover {
