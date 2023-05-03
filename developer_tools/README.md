@@ -1,4 +1,4 @@
-Developer tools
+# Project Name: Developer tools
 
 ![image](https://user-images.githubusercontent.com/106556798/226505052-0576b579-1989-47df-8ca4-f94c16dc9803.png)
 
@@ -16,7 +16,7 @@ In this project, you will analyze this website [https://dev-tools.hbtn.info/](ht
 
 > 0. Responsive device
 
-Go to `https://dev-tools.hbtn.info/`
+Go to https://dev-tools.hbtn.info/
 
 Take a screenshot of the website using the device toolbar Choose iPhone X and show the size in your screenshot (selected device or size in pixel of the rendering)
 
