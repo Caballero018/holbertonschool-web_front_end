@@ -145,7 +145,7 @@ From this HTML:
 
 Build this responsive web page:
 
-![image]()
+![image](readme_images/1.gif)
 
 Requirements:
 
