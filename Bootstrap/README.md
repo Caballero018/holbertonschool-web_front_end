@@ -843,11 +843,9 @@ With this HTML: (one Bootstrap template example)
 
 Create the custom stylesheet 6-styles.css to match this layout.
 
-
-
-
-
-
+![Image](readme_images/8.png)
+![Image](readme_images/9.png)
+![Gif](readme_images/10.gif)
 
 Requirements:
 
