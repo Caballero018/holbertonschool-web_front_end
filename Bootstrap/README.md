@@ -1,0 +1,546 @@
+# Bootstrap
+
+![Logo bootstrap](readme_images/logo-bootstrap.png)
+
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript design templates for typography, forms, buttons, navigation, and other interface components.
+
+For this project, you will use Bootstrap 4.4 and only the CSS styling part.
+
+## Requirements
+
+### General
+
+* A README.md file, at the root of the folder of the project, is mandatory
+* Use Bootstrap version 4.4.1
+
+## Use the CDN version
+
+Add this `<link>` in the `<head>` part of your HTML
+
+~~~
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+~~~
+
+## Tasks
+
+> 0. Reboot styling
+
+From this HTML:
+
+~~~
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Holberton - Web Stack - Bootstrap</title>
+        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+
+        <style>
+            .my-container {
+                background-color: #FF0000;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="my-container">
+            <h1>Hello</h1>
+            <h2>Holberton</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eleifend nulla, quis imperdiet lacus. Donec tempor lorem enim, sit amet tempus purus euismod sit amet. Nam laoreet quis purus a consequat. Quisque interdum bibendum varius. Praesent lobortis eros sit amet tortor varius elementum. Fusce eget varius ex. Cras id lectus consectetur, bibendum dolor in, hendrerit lacus. Praesent rutrum, odio id tincidunt fringilla, dolor eros condimentum lacus, blandit molestie massa velit hendrerit risus. Nam ex nunc, ultrices id nisi consectetur, mattis imperdiet purus. Sed tempus ullamcorper nisi, vitae pulvinar nunc varius eu. Maecenas ut volutpat lectus.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Phasellus quis dolor sed ligula porttitor fringilla.</li>
+                <li>
+                    <ul>
+                        <li>Integer vulputate arcu quis luctus condimentum.</li>
+                        <li>Integer commodo turpis non ligula viverra, ut sagittis elit ornare.</li>
+                    </ul>
+                </li>
+                <li>Etiam porttitor justo in diam elementum, nec mollis tellus viverra.</li>
+                <li>Vivamus non ligula quis dui auctor sagittis.</li>
+            </ul>
+        </div>
+
+    </body>
+</html>
+~~~
+
+Add Bootstrap to reset the CSS styling.
+
+Your final page must look like this:
+
+![image](readme_images/0.jpg)
+
+File: `0-index.html`
+
+---
+
+> 1. Blocks
+
+From this HTML:
+
+~~~
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Holberton - Web Stack - Bootstrap</title>
+        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div>
+            <div>Primary</div>
+            <div>Success</div>
+            <div>Danger</div>
+            <div>Warning</div>
+        </div>
+
+        <hr />
+
+        <div>
+            <div>Primary</div>
+            <div>Success</div>
+            <div>Danger</div>
+            <div>Warning</div>
+        </div>
+
+        <hr />
+
+        <div>
+            <div>Primary</div>
+            <div>Success</div>
+            <div>Danger</div>
+        </div>
+
+        <hr />
+
+        <div>
+            <div>Primary</div>
+            <div>Success</div>
+            <div>Danger</div>
+            <div>Warning</div>
+        </div>
+
+        <hr/>
+
+        <div>
+            <div>Primary</div>
+            <div>Success</div>
+        </div>
+
+        <hr/>
+
+        <div>
+            <div>Primary</div>
+            <div>Success</div>
+            <div>Danger</div>
+        </div>
+    </body>
+</html>
+~~~
+
+Build this responsive web page:
+
+![image]()
+
+Requirements:
+
+* You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
+* You can not change the HTML structure - only adding classes is allowed
+
+**Behaviors/styles:**
+
+For all cells of all rows:
+
+Padding at .5rem
+Background color of the name of the cell
+Text centered and white
+
+First line:
+
+* Each cell has the same width
+* Screen >= 992px: display like 4 columns in one line
+* Screen < 992px: display like 4 lines in one column
+
+Second line:
+
+* Each cell has the same width
+* Screen >= 576px: display like 4 columns in one line
+* Screen < 576px: display like 4 lines in one column
+
+Third line:
+
+* The last cell is taking 50% of the width screen
+* The middle cell has 2 times the size of the first cell
+* Screen >= 992px: display like 3 columns in one line
+* Screen < 992px: display like 3 lines in one column
+
+Fourth line:
+
+* Different order (from left to right) based on the size
+* Screen >= 1200px: Primary -> Success -> Danger -> Warning
+* Screen between 992px and 1200px: Warning -> Primary -> Success -> Danger
+* Screen between 768px and 992px: Danger -> Warning -> Primary -> Success
+* Screen <= 768px: Success -> Danger -> Warning -> Primary
+
+Fifth line:
+
+* Each cell has the same width (~16% of the screen)
+* Screen >= 768px: display like 2 columns on each side of the screen in one line
+* Screen < 768px: display like 2 lines in one column
+
+Last line:
+
+* Each cell has the same width (~16% of the screen)
+* Screen >= 768px: display like 3 columns in one line with the space between the first and middle cell 2 times bigger than the space between the middle cell and the last cell
+* Screen < 768px: display like 3 lines in one column
+
+File: `1-index.html`
+
+---
+
+> 2. Table of chemical elements
+
+From this HTML:
+
+~~~
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Holberton - Web Stack - Bootstrap</title>
+        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li>
+                    <a href="/">
+                        <img src="https://via.placeholder.com/150x50" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Chemical elements</a>
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+            </ul>
+        </header>
+
+        <main>
+            <section>
+                <div role="alert">
+                    <h4>List of chemical elements</h4>
+                    <p>This is a list of the 5 first chemical elements which have been identified as of 2019.</p>
+                    <hr>
+                    <p>A popular visualization of all 118 elements is <a href="https://en.wikipedia.org/wiki/Periodic_table">the periodic table of the elements</a>.</p>
+                </div>
+            </section>
+
+            <section>
+                <h1>Chemical elements <span>only 5</span></h1>
+
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Atomic number</th>
+                                <th scope="col">Symbol</th>
+                                <th scope="col">Element</th>
+                                <th scope="col">Origin of name</th>
+                                <th scope="col">Group</th>
+                                <th scope="col">Period</th>
+                                <th scope="col">Atomic weight</th>
+                                <th scope="col">Density</th>
+                                <th scope="col">Melting point</th>
+                                <th scope="col">Boiling point</th>
+                                <th scope="col">Specific heat capacity</th>
+                                <th scope="col">Electro­negativity</th>
+                                <th scope="col">Abundance in Earth's crust</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>H</td>
+                                <td>Hydrogen</td>
+                                <td>Greek elements <i>hydro-</i> and <i>-gen</i>, meaning 'water-forming'</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1.008</td>
+                                <td>0.00008988</td>
+                                <td>14.01</td>
+                                <td>20.28</td>
+                                <td>14.304</td>
+                                <td>2.20</td>
+                                <td>1400</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>He</td>
+                                <td>Helium</td>
+                                <td>Greek <i>hḗlios</i>, 'sun'</td>
+                                <td>18</td>
+                                <td>1</td>
+                                <td>4.002602</td>
+                                <td>0.0001785</td>
+                                <td>—</td>
+                                <td>4.22</td>
+                                <td>5.193</td>
+                                <td>–</td>
+                                <td>0.008</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Li</td>
+                                <td>Lithium</td>
+                                <td>Greek <i>líthos</i>, 'stone'</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>6.94</td>
+                                <td>0.534</td>
+                                <td>453.69</td>
+                                <td>1560</td>
+                                <td>3.582</td>
+                                <td>0.98</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Be</td>
+                                <td>Beryllium</td>
+                                <td>Beryl, a mineral (ultimately from the name of Belur in southern India)</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>9.0121831</td>
+                                <td>1.85</td>
+                                <td>1560</td>
+                                <td>2742</td>
+                                <td>1.825</td>
+                                <td>1.57</td>
+                                <td>2.8</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>B</td>
+                                <td>Boron</td>
+                                <td>Borax, a mineral (from Arabic <i>bawraq</i>)</td>
+                                <td>13</td>
+                                <td>2</td>
+                                <td>10.81</td>
+                                <td>2.34</td>
+                                <td>2349</span></td>
+                                <td>4200</td>
+                                <td>1.026</td>
+                                <td>2.04</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+~~~
+
+Build this responsive web page:
+
+![image](readme_images/2.png)
+
+![Gif](readme_images/3.gif)
+
+Requirements:
+
+* You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
+* You can not change the HTML structure - only adding classes is allowed
+
+**Behaviors/styles:**
+
+* Header:
+    * With border bottom
+    * Padding .5rem and margin bottom 1rem
+    * Background color “light”
+    * Horizontal listing, no margin bottom:
+        * First item aligned on the left with a border rounded image
+        * 2 other items aligned on the right with 2 links (aligned vertically in the middle) with a layout of a button of style “secondary”
+        * The link “Chemical elements” is active
+* The main block has full width, spanning the entire width of the viewport
+* The first section:
+    * The div inside is an alert of style “info”:
+        * h4 is the header of this alert
+        * The last paragraph (containing the link) should not have any margin bottom
+* The second section:
+    * h1 has a margin bottom at 1.5rem and margin top at 3rem
+    * Inside the h1, “only 5” has a badge layout of type “info”
+    * The div is able to make the table responsive with a break at 992px
+    * The table has “dark” style and hover on rows
+
+File: `2-index.html`
+
+---
+
+> 3. Cards
+
+From this HTML:
+
+~~~
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Holberton - Web Stack - Bootstrap</title>
+        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>Coding</div>
+                        <img src="https://via.placeholder.com/450x200" />
+                        <div>
+                            <h5>HTML</h5>
+                            <p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.</p>
+                            <button data-toggle="modal" data-target="#playModal">Play with</button>
+                        </div>
+                        <div>40h</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>Coding</div>
+                        <img src="https://via.placeholder.com/450x200" />
+                        <div>
+                            <h5>CSS</h5>
+                            <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+                            <button data-toggle="modal" data-target="#playModal">Play with</button>
+                        </div>
+                        <div>35h</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>Coding</div>
+                        <img src="https://via.placeholder.com/450x200" />
+                        <div>
+                            <h5>Javascript</h5>
+                            <p>JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.</p>
+                            <button data-toggle="modal" data-target="#playModal">Play with</button>
+                        </div>
+                        <div>70h</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="playModal" tabindex="-1" role="dialog" aria-labelledby="playModal" aria-hidden="true">
+            <div role="document">
+                <div>
+                    <div>
+                        <h5 id="exampleModalLabel">Play with CodePen</h5>
+                        <button type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div>
+                        <p>
+                            CodePen is an online community for testing and showcasing user-created HTML, CSS and JavaScript code snippets. 
+                            It functions as an online code editor and open-source learning environment, where developers can create code snippets, called "pens," and test them.
+                        </p>
+                        <p>
+                            It was founded in 2012 by full-stack developers Alex Vazquez and Tim Sabat and front-end designer Chris Coyier.
+                            Its employees work remotely, rarely all meeting together in person. 
+                        </p>
+                        <p>
+                            CodePen is one of the largest communities for web designers and developers to showcase their coding skills, with an estimated 330,000 registered users and 14.16 million monthly visitors.
+                        </p>
+
+                        <form>
+                            <div>
+                                <h5>Connect</h5>
+                            </div>
+                            <div>
+                                <label for="username">Username</label>
+                                <div>
+                                    <input type="text" id="username" />
+                                </div>
+                            </div>
+                            <div>
+                                <label for="passowrd">Password</label>
+                                <div>
+                                    <input type="password" id="passowrd" />
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit">Connect</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+~~~
+
+Build this responsive web page:
+
+![Image](readme_images/4.png)
+![Image](readme_images/5.png)
+![Gif](readme_images/6.gif)
+
+Requirements:
+
+* You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
+* You can not change the HTML structure - only adding classes is allowed
+
+**Behaviors/styles:**
+
+* The first div is a container with a break at 992px and padding of 3rem
+    * Inside, card is in row until 576px where it will switch to column
+    * Each card has a spacing of 1.5rem on top
+    * The text “Coding” is a card header
+    * Language name (card title) and description (card text) are inside a card body
+    * Duration in hour is a card footer
+    * Also, the button “Play with” has the “danger” layout and should open a modal
+* The second div is the modal:
+    * Centered vertically and horizontally
+    * The form has a border on top and a padding on top of 1rem:
+        * Each items of the form are grouped
+        * The final rendering of the form must be the same as the screen (label on the left, color style, etc..)
+
+File: `3-index.html`
+
+---
+
+> 4. Bob Dylan
+
+File: `4-index.html`
+
+---
+
+> 5. Show/Hide - screen size
+
+File: `5-index.html`
+
+---
+
+> 6. Overwrite CSS
+
+File: `6-styles.css`
