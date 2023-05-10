@@ -618,13 +618,13 @@ From this HTML:
 
 Build this responsive web page:
 
-![image](readme_images/)
+![image](readme_images/4.0.png)
 
-![image](readme_images/)
+![image](readme_images/4.1.png)
 
-![image](readme_images/)
+![image](readme_images/4.2.png)
 
-![image](readme_images/)
+![image](readme_images/4.3.gif)
 
 Requirements:
 
